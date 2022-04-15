@@ -2,10 +2,7 @@ package com.example.stockmarket.presentation.company_info
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.CircularProgressIndicator
-import androidx.compose.material.Divider
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.Center
@@ -18,6 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.stockmarket.ui.theme.DarkBlue
+import com.example.stockmarket.ui.theme.cardColor
 import com.ramcosta.composedestinations.annotation.Destination
 
 
@@ -84,13 +82,23 @@ fun CompanyInfoScreen(
                     Spacer(modifier = Modifier.height(16.dp))
                     Text(text = "Market Summary")
                     Spacer(modifier = Modifier.height(16.dp))
-                    StockChart(
-                        infos = state.stocksInfos,
+                    Card(
                         modifier = Modifier
-                            .fillMaxWidth()
-                            .height(250.dp)
-                            .align(CenterHorizontally)
-                    )
+                        .fillMaxWidth(),
+                        backgroundColor = cardColor,
+                        elevation = 8.dp,
+
+                    ) {
+                        StockChart(
+                            infos = state.stocksInfos,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(250.dp)
+                                .align(CenterHorizontally)
+                                .padding(16.dp)
+                        )
+                    }
+
                 }
             }
         }
