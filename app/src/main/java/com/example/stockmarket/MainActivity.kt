@@ -9,10 +9,10 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.stockmarket.presentation.company_listings.NavGraph
-import com.example.stockmarket.presentation.company_listings.NavGraphs
-import com.example.stockmarket.presentation.company_listings.NavGraphs.root
+import com.example.stockmarket.presentation.NavGraphs
+
+
+
 import com.example.stockmarket.ui.theme.StockMarketTheme
 import com.ramcosta.composedestinations.DestinationsNavHost
 import dagger.hilt.android.AndroidEntryPoint
