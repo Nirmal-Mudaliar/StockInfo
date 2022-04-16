@@ -18,6 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavBackStackEntry
 import com.example.stockmarket.presentation.destinations.CompanyInfoScreenDestination
 import com.example.stockmarket.presentation.destinations.CompanyListingsScreenDestination
 import com.google.accompanist.swiperefresh.SwipeRefresh
@@ -34,6 +35,7 @@ fun CompanyListingsScreen(
     val swipeRefreshState = rememberSwipeRefreshState(
         isRefreshing = viewModel.state.isRefreshing
     )
+
     val state = viewModel.state
     Column(
         Modifier.fillMaxSize()
